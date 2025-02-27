@@ -156,28 +156,28 @@ document.getElementById("mycheckbox1").addEventListener("change", function() {
             quizindex = quizindex + 1 ;
             nextquiz();
             questionnumber();
-            updateProgressBar(quizindex, 5);
+            updateProgressBar(quizindex, 10);
             unlock();
         } else if (hold == 20) {
             answerB = answerB +1;
             quizindex = quizindex + 1 ;
             nextquiz();
             questionnumber();
-            updateProgressBar(quizindex, 5);
+            updateProgressBar(quizindex, 10);
             unlock();
         } else if (hold == 25) {
             answerC = answerC +1
             quizindex = quizindex + 1 ;
             nextquiz();
             questionnumber();
-            updateProgressBar(quizindex, 5);
+            updateProgressBar(quizindex, 10);
             unlock();
         } else if (hold == 26) {
             answerD = answerD +1
             quizindex = quizindex + 1 ;
             nextquiz();
             questionnumber();
-            updateProgressBar(quizindex, 5);
+            updateProgressBar(quizindex, 10);
             unlock();
         } else if (hold == 0) {
             alert ('チェックされていません')
@@ -193,7 +193,7 @@ document.getElementById("mycheckbox1").addEventListener("change", function() {
 
 
 const nextquiz = () => {
-    if(quizindex < 5){
+    if(quizindex < quizlength){
         setupquiz ();
         
     }else{
