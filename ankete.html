@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIの進化と未来</title>
+    <meta name="discription" content="AIの進化の仮定や、現在のAIの活用例、AIの未来についてのウェブページです。">
+    <link rel="stylesheet" href="./assets/css/sanitize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        body {
+           background-image: url(assets/image/AI\ thinking.jpeg); 
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+           color: white;
+        }
+        #this-question {
+            margin: 20px;
+            font-size: 22px;
+        }
+        .ankete {
+            margin-left: 40px;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+        }
+
+        .progress-bar {
+            width: 0%;
+            height: 30px;
+            background-color: #76c7c0;
+            border-radius: 25px;
+            text-align: center;
+            color: white;
+            line-height: 30px;
+        }
+        .progress-bar-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="ankete">
+        <audio id="background-audio2" src="assets/videos/maou_bgm_fantasy06.mp3" loop></audio>
+        <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar">0%</div>
+        </div>
+        <h4 id="this-question">aaa</h4>
+        <h3 id="game-headline">好きなフルーツを選んでください：</h3>
+        <label"><input type="checkbox" id="mycheckbox1" ><span id="span"></span></label>
+        <br>
+        <label><input type="checkbox" id="mycheckbox2" ><span id="span"></span></label>
+        <br>
+        <label><input type="checkbox" id="mycheckbox3" ><span id="span"></span></label>
+        <br>
+        <label><input type="checkbox" id="mycheckbox4" ><span id="span"></span></label>
+        <br>
+        <div class="nextbutton">
+            <button id="next">次へ</button>
+        </div>
+
+    </section>
+
+    <script src="assets/js/game.js"></script>
+    <script>
+        document.addEventListener("click", function() {
+            // 音声の再生（ユーザー操作が必要な場合があります）
+            const audio = document.getElementById('background-audio2');
+            audio.play();
+        });
+    </script>
+    
+
+
+</body>
+
+
+

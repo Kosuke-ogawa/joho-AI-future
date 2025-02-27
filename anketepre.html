@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIの進化と未来</title>
+    <meta name="discription" content="AIの進化の仮定や、現在のAIの活用例、AIの未来についてのウェブページです。">
+    <link rel="stylesheet" href="./assets/css/sanitize.css">
+    <link rel="stylesheet" href="">
+</head>
+
+<body><!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>背景動画</title>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                overflow: hidden;
+            }
+            .video-background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                min-height: 100%;
+            }
+            .content-div{
+                padding-top: 10%;
+                margin: 40px;
+            }
+            .content {
+
+                position: relative;
+                color: white;
+                text-align: center;
+                font-size: 25px;
+                font-weight: bold;
+                line-height: 2.0;
+                opacity: 0;
+            }
+            .fade-in {
+                animation: fadeIn 3s forwards;
+
+            }
+            @keyframes fadeIn {
+                to {
+                opacity: 1;
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <audio id="background-audio" src="assets/videos/Endless_Sunshine.mp3"></audio>
+        <video autoplay muted loop class="video-background">
+            <source src="assets/videos/istockphoto-1388260734-640_adpp_is.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content-div">
+            <h1 class="content">
+                西暦2045年。人類は人工知能の恩恵を受けつつも、その影響力とリスクを慎重に見極める時代に突入しました。
+            </h1>
+            <h1 class="content">
+                あなたは、この新たな時代の中心に立ち、人類とAIの共存を模索するリーダーとなります。
+            </h1>
+            <h1 class="content">
+                このゲームでは、あなたの決断が未来を形作ります。
+            </h1>
+            <h1 class="content">
+                AI技術の進化、社会への影響、倫理的なジレンマ—これらの複雑な課題に挑み、
+                <br>人類のための最良の未来を築いてください。
+            </h1>
+            <h1 class="content">
+                準備はできていますか？さあ、「未来への扉」を開きAIの未来を描く旅に出発しましょう。
+            </h1>
+
+        </div>
+
+
+        <script>
+            document.addEventListener("click", function() {
+              // 音声の再生（ユーザー操作が必要な場合があります）
+              const audio = document.getElementById('background-audio');
+              audio.play();
+        
+              // テキストのフェードイン処理
+              const elements = document.querySelectorAll('.content');
+              elements.forEach((element, index) => {
+                setTimeout(() => {
+                  element.classList.add('fade-in');
+                }, index * 4000); // 4秒ごとにフェードイン
+              });
+        
+              // 最後の要素がフェードインし終わる時間に応じて新しいウィンドウを開く
+              setTimeout(() => {
+                audio.pause();
+                window.open('ankete.html', '_self'); 
+              }, elements.length * 4000 + 3000); // すべてのフェードインが完了した後
+            });
+          </script>
+
+
+    </html>
+</body>
+    
